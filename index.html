@@ -24,18 +24,15 @@
             transition: 0.5s;
             top:40%
         }
-
         .next{
             right: 0;
         }
-
         .back{
             left: 0;
         }
         .next:hover{
             transform: scale(0.8) translatex(-10)px;
         }
-
         .back:hover{
             transform: scale(0.8)translatex(10)px;
         }
@@ -48,7 +45,6 @@
         <img src="img/next1.png" class="next ico-action" onclick="next()">
         <img src="img/back1.png" class="back ico-action" onclick="back()">
     </div>
-
     <script>
         const images = ["img/img1.avif","img/img2.avif","img/img3.avif","img/img4.avif","img/img5.avif",
             "img/img6.avif","img/img7.avif","img/img8.avif"];
@@ -65,7 +61,6 @@
         }
           slide.src = images[index]
     }
-
     function back(){ 
             if(index>0){
           index--;
