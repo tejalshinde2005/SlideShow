@@ -4,10 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SlideShow</title>
+    <style>
+        .images{
+            height: 400px;
+            width: 600px;
+            border-radius: 10px;
+        }
+        .container{
+            width: fit-content;
+            margin: 50px auto;
+            object-fit: cover; /*images chi size cover karnyasathi*/
+            border-radius: 10px;
+            position: relative;
+        }
+        .ico-action{
+            height: 80px;
+            position: absolute;
+
+        }
+
+        .next{
+
+        }
+
+        .back{
+
+
+
+        }
+    </style>
 </head>
 <body>
     <div class = "container">
         <img src="img/img1.avif" class="images">
+        <img src="img/next-icon.png" class="next ico-action">
+        <img src="img/back-icon.png" class="back ico-action">
     </div>
 </body>
 </html>
