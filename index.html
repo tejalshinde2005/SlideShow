@@ -20,25 +20,63 @@
         .ico-action{
             height: 80px;
             position: absolute;
-
+            cursor: pointer;
+            transition: 0.5s;
+            top:40%
         }
 
         .next{
-
+            right: 0;
         }
 
         .back{
-
-
-
+            left: 0;
         }
+        .next:hover{
+            transform: scale(0.8) translatex(-10)px;
+        }
+
+        .back:hover{
+            transform: scale(0.8)translatex(10)px;
+        }
+
     </style>
 </head>
 <body>
     <div class = "container">
-        <img src="img/img1.avif" class="images">
-        <img src="img/next-icon.png" class="next ico-action">
-        <img src="img/back-icon.png" class="back ico-action">
+        <img src="img/img1.avif" class="images" id ="slide">
+        <img src="img/next1.png" class="next ico-action" onclick="next()">
+        <img src="img/back1.png" class="back ico-action" onclick="back()">
     </div>
+
+    <script>
+        const images = ["img/img1.avif","img/img2.avif","img/img3.avif","img/img4.avif","img/img5.avif",
+            "img/img6.avif","img/img7.avif","img/img8.avif"];
+
+            let index = 0;
+            const slide = document.getElementById('slide')
+
+        function next(){ 
+            if(index<images.length -1){
+          index++;
+        }
+        else{
+            index=0;
+        }
+          slide.src = images[index]
+    }
+
+    function back(){ 
+            if(index>0){
+          index--;
+        }
+        else{
+            index=images.length-1;
+        }
+          slide.src = images[index]
+    }
+
+     setInterval(next,2000);
+    </script>
 </body>
 </html>
